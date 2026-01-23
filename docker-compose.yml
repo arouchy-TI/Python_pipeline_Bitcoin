@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  bitcoin-pipeline:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data  # <--- Isso faz a mágica de salvar no seu PC
+    environment:
+      - PYTHONUNBUFFERED=1
