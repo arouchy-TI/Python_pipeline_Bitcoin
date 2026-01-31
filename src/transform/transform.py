@@ -1,14 +1,18 @@
 from datetime import datetime
 
+# recebe dois parametros externos
+# limpar os dados
 def tratar_dados_Bitcoin(dados_brutos, taxa_conversao):
-    # Convertendo o preço da Coinbase para float
+    # Convertendo o preço do bitcoin da Coinbase para float
     valor_usd = float(dados_brutos['data']['amount'])
     
     # Convertendo a taxa da API de câmbio para float
     taxa = float(taxa_conversao)
     
+    # calcula valor do bitcoin em reais
     valor_brl = valor_usd * taxa
     
+    # lista contem um dicionario
     dados_processados = [{
         "valor_usd": valor_usd,
         "valor_real_brasileiro": valor_brl,

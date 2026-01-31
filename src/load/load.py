@@ -3,6 +3,9 @@ import json
 from pathlib import Path
 from datetime import datetime
 
+# dados_tratados - camada tranform
+# dados_brutos_api - camada extract
+
 def salvar_dados_multiplos_formatos(dados_tratados, dados_brutos_api):
     # 1. Localiza a raiz do projeto
     raiz_projeto = Path(__file__).parent.parent.parent
